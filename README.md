@@ -62,5 +62,5 @@ go build code.go
 
 ---
 
-**Boshlanish sanasi**: 2024
+**Boshlanish sanasi**: 2026
 **Status**: 🟢 Faol o'rganish jarayonida
