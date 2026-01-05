@@ -13,8 +13,9 @@ go-practice/
 │   ├── notes.md     → O'rganilgan nazariya va qoidalar
 │   └── code.go      → Amaliy mashqlar va misollar
 ├── day-02/          → Kun 2: Funksiyalar va parametrlar
-│   ├── notes.md
-│   └── code.go
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   └── functions.go → Barcha funksiyalar (alohida fayl)
 ├── ...
 ├── day-30/          → Kun 30: Yakuniy loyiha
 │   ├── notes.md
@@ -26,7 +27,7 @@ go-practice/
 ## 🚀 Dasturni ishga tushirish (How to run)
 
 ```bash
-# Kunlik kodni ishga tushirish
+# Kun 1 kodini ishga tushirish
 cd day-01
 go run code.go
 
@@ -34,9 +35,17 @@ go run code.go
 go build code.go
 ./code
 
-# 2-kun kodini ishga tushirish
+# Kun 2 kodini ishga tushirish (bir nechta fayl)
 cd day-02
-go run code.go
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-02/*.go
+
+# Kompilyatsiya qilib ishga tushirish
+cd day-02
+go build
+./day-02
 ```
 
 ## 📚 O'rganish rejasi (Learning Plan)
