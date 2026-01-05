@@ -5,70 +5,65 @@ import "fmt"
 // main funksiyasi - har bir Go dasturining boshlanish nuqtasi
 // Bu funksiya dastur ishga tushganda avtomatik chaqiriladi
 func main() {
-
-	// 1. SALOM DUNYO - Eng oddiy Go dasturi
-
-	fmt.Println("=== Salom, Go dasturlash tili! ===")
+	// 1. Salom dunyo - eng oddiy Go dasturi
+	fmt.Println("Salom, Go dasturlash tili!")
 	fmt.Println()
 
-	// 2. O'ZGARUVCHILAR (VARIABLES)
-
+	// 2. O'zgaruvchilar (Variables)
 	// Usul 1: var bilan to'liq e'lon qilish (tip ko'rsatiladi)
-	var ism string = "Matnazar"
-	var yosh int = 25
-	var shahar string = "Toshkent"
+	var name string = "Matnazar"
+	var age int = 25
+	var city string = "Toshkent"
 
-	fmt.Println("--- O'zgaruvchilar ---")
-	fmt.Println("Ism:", ism)
-	fmt.Println("Yosh:", yosh)
-	fmt.Println("Shahar:", shahar)
+	fmt.Println("O'zgaruvchilar:")
+	fmt.Println("Ism:", name)
+	fmt.Println("Yosh:", age)
+	fmt.Println("Shahar:", city)
 	fmt.Println()
 
 	// Usul 2: var bilan qisqa e'lon (tip avtomatik aniqlanadi)
-	var telefon = "+998901234567"
+	var phone = "+998901234567"
 	var email = "matnazar@example.com"
 
-	fmt.Println("Telefon:", telefon)
+	fmt.Println("Telefon:", phone)
 	fmt.Println("Email:", email)
 	fmt.Println()
 
 	// Usul 3: Qisqa sintaksis (:=) - faqat funksiya ichida ishlaydi
 	// Bu eng qulay usul
-	kasb := "Dasturchi"
-	maosh := 5000.50
-	ishlaydi := true
+	profession := "Dasturchi"
+	salary := 5000.50
+	isWorking := true
 
-	fmt.Println("Kasb:", kasb)
-	fmt.Println("Maosh:", maosh)
-	fmt.Println("Ishlaydi:", ishlaydi)
+	fmt.Println("Kasb:", profession)
+	fmt.Println("Maosh:", salary)
+	fmt.Println("Ishlaydi:", isWorking)
 	fmt.Println()
 
-	// 3. MA'LUMOT TURLARI (DATA TYPES)
-
-	fmt.Println("--- Ma'lumot turlari ---")
+	// 3. Ma'lumot turlari (Data Types)
+	fmt.Println("Ma'lumot turlari:")
 
 	// String (matn)
-	var matn string = "Bu matn turi"
-	fmt.Printf("String: %s\n", matn)
+	var text string = "Bu matn turi"
+	fmt.Printf("String: %s\n", text)
 
 	// Integer (butun son)
-	var butunSon int = 42
-	fmt.Printf("Integer: %d\n", butunSon)
+	var integer int = 42
+	fmt.Printf("Integer: %d\n", integer)
 
 	// Float (o'nlik son)
-	var onlikSon float64 = 3.14159
-	fmt.Printf("Float: %.2f\n", onlikSon)
+	var floatNum float64 = 3.14159
+	fmt.Printf("Float: %.2f\n", floatNum)
 
 	// Boolean (mantiqiy)
-	var rost bool = true
-	var yolgon bool = false
-	fmt.Printf("Boolean (rost): %t\n", rost)
-	fmt.Printf("Boolean (yolgon): %t\n", yolgon)
+	var trueValue bool = true
+	var falseValue bool = false
+	fmt.Printf("Boolean (rost): %t\n", trueValue)
+	fmt.Printf("Boolean (yolgon): %t\n", falseValue)
 	fmt.Println()
 
-	// 4. PRINT FUNKSIYALARI
-
-	fmt.Println("--- Print funksiyalari ---")
+	// 4. Print funksiyalari
+	fmt.Println("Print funksiyalari:")
 
 	// fmt.Print() - oddiy chiqarish, yangi qator qo'shmaydi
 	fmt.Print("Bu birinchi matn. ")
@@ -80,43 +75,40 @@ func main() {
 	fmt.Println("Bu ham yangi qator bilan")
 
 	// fmt.Printf() - formatlangan chiqarish
-	ism2 := "Go"
-	versiya := 1.21
-	fmt.Printf("Dasturlash tili: %s, Versiya: %.2f\n", ism2, versiya)
+	language := "Go"
+	version := 1.21
+	fmt.Printf("Dasturlash tili: %s, Versiya: %.2f\n", language, version)
 	fmt.Println()
 
-	// 5. O'ZGARUVCHILARNI QAYTA ISHLATISH
+	// 5. O'zgaruvchilarni qayta ishlatish
+	fmt.Println("O'zgaruvchilarni yangilash:")
 
-	fmt.Println("--- O'zgaruvchilarni yangilash ---")
+	balance := 100
+	fmt.Printf("Boshlang'ich hisob: %d\n", balance)
 
-	hisob := 100
-	fmt.Printf("Boshlang'ich hisob: %d\n", hisob)
+	balance = 150 // Yangi qiymat berish (= ishlatiladi, := emas)
+	fmt.Printf("Yangi hisob: %d\n", balance)
 
-	hisob = 150 // Yangi qiymat berish (= ishlatiladi, := emas)
-	fmt.Printf("Yangi hisob: %d\n", hisob)
-
-	hisob = hisob + 50 // Matematik amallar
-	fmt.Printf("Yana qo'shildi: %d\n", hisob)
+	balance += 50 // Matematik amallar
+	fmt.Printf("Yana qo'shildi: %d\n", balance)
 	fmt.Println()
 
-	// 6. KONSTANTALAR (CONSTANTS)
-
-	fmt.Println("--- Konstanta ---")
+	// 6. Konstanta (Constants)
+	fmt.Println("Konstanta:")
 
 	// const - o'zgarmas qiymatlar
 	const pi float64 = 3.14159
-	const davlat string = "O'zbekiston"
+	const country string = "O'zbekiston"
 
 	fmt.Printf("Pi soni: %.5f\n", pi)
-	fmt.Printf("Davlat: %s\n", davlat)
+	fmt.Printf("Davlat: %s\n", country)
 
 	// const qiymatini o'zgartirib bo'lmaydi
 	// pi = 3.14 // Bu xato bo'ladi!
 	fmt.Println()
 
-	// 7. MATEMATIK AMALLAR
-
-	fmt.Println("--- Matematik amallar ---")
+	// 7. Matematik amallar
+	fmt.Println("Matematik amallar:")
 
 	a := 10
 	b := 5
@@ -128,25 +120,23 @@ func main() {
 	fmt.Printf("%d %% %d = %d\n", a, b, a%b) // % - qoldiq
 	fmt.Println()
 
-	// 8. MATN BILAN ISHLASH
+	// 8. Matn bilan ishlash (String operations)
+	fmt.Println("Matn bilan ishlash:")
 
-	fmt.Println("--- Matn bilan ishlash ---")
-
-	familiya := "Matnazarov"
-	ism3 := "Matnazar"
+	lastName := "Matnazarov"
+	firstName := "Matnazar"
 
 	// Matnlarni birlashtirish (+)
-	toliqIsm := ism3 + " " + familiya
-	fmt.Println("To'liq ism:", toliqIsm)
+	fullName := firstName + " " + lastName
+	fmt.Println("To'liq ism:", fullName)
 
 	// fmt.Sprintf() - formatlangan matn yaratish
-	matn2 := fmt.Sprintf("Ism: %s, Familiya: %s", ism3, familiya)
-	fmt.Println("Formatlangan matn:", matn2)
+	formattedText := fmt.Sprintf("Ism: %s, Familiya: %s", firstName, lastName)
+	fmt.Println("Formatlangan matn:", formattedText)
 	fmt.Println()
 
-	// 9. YAKUNIY XULOSA
-
-	fmt.Println("=== Kun 1 yakunlandi! ===")
+	// 9. Yakuniy xulosa
+	fmt.Println("Kun 1 yakunlandi!")
 	fmt.Println("O'rganildi:")
 	fmt.Println("  ✓ Package va import")
 	fmt.Println("  ✓ O'zgaruvchilar (var, :=)")
@@ -154,4 +144,5 @@ func main() {
 	fmt.Println("  ✓ Print funksiyalari")
 	fmt.Println("  ✓ Konstanta")
 	fmt.Println("  ✓ Matematik amallar")
+	fmt.Println("  ✓ Matn bilan ishlash")
 }

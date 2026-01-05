@@ -1,0 +1,131 @@
+run:
+  timeout: 5m
+  tests: true
+
+output:
+  formats:
+    - format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
+
+linters-settings:
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
+  goconst:
+    min-len: 2
+    min-occurrences: 2
+  gocritic:
+    enabled-tags:
+      - diagnostic
+      - experimental
+      - opinionated
+      - performance
+      - style
+    disabled-checks:
+      - dupImport
+      - ifElseChain
+      - octalLiteral
+      - whyNoLint
+      - wrapperFunc
+  gocyclo:
+    min-complexity: 15
+  goimports:
+    local-prefixes: github.com/Matnazar-Matnazarov/go-practice
+  govet:
+    enable-all: true
+  lll:
+    line-length: 140
+  misspell:
+    locale: US
+  nolintlint:
+    allow-leading-space: true
+    allow-unused: false
+    require-explanation: false
+    require-specific: false
+  revive:
+    rules:
+      - name: exported
+        severity: warning
+      - name: unexported-return
+        severity: warning
+      - name: error-return
+        severity: warning
+      - name: error-naming
+        severity: warning
+      - name: error-strings
+        severity: warning
+      - name: receiver-naming
+        severity: warning
+      - name: increment-decrement
+        severity: warning
+      - name: var-naming
+        severity: warning
+      - name: range
+        severity: warning
+      - name: if-return
+        severity: warning
+      - name: unused-parameter
+        severity: warning
+  staticcheck:
+    checks: ["all", "-SA1019"]
+  unused:
+    check-exported: false
+  whitespace:
+    multi-if: false
+    multi-func: false
+
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - typecheck
+    - unused
+    - gofmt
+    - goimports
+    - misspell
+    - revive
+    - gocritic
+    - gocyclo
+    - goconst
+    - mnd
+    - lll
+    - whitespace
+
+issues:
+  exclude-dirs:
+    - exercises
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - errcheck
+        - goconst
+        - gocyclo
+        - mnd
+    - path: day-.*/code\.go
+      linters:
+        - mnd
+        - revive
+      text: "unhandled-error"
+    - path: day-.*/code\.go
+      linters:
+        - mnd
+      text: "Magic number"
+  max-issues-per-linter: 0
+  max-same-issues: 0
+  exclude:
+    - "Error return value of .((os\\.)?std(out|err)\\..*|.*Close|.*Flush|os\\.Remove(All)?|.*printf?|os\\.(Un)?Setenv). is not checked"
+    - "exported function .* should have comment or be unexported"
+    - "package comment should be of the form"
+    - "comment on exported (function|method|type|const|var) .* should be"
+    - "should have comment or be unexported"
+    - "func name will be used as test\\.Test.* by other packages"
+    - "don't use an underscore in package name"
+    - "var name will be used as test\\.Test.* by other packages"
+    - "announce:"
+    - "nolint:"
+    - "is a replace directive"
