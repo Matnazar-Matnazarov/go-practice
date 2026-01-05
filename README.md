@@ -33,11 +33,17 @@ go run code.go
 # Yoki kompilyatsiya qilib ishga tushirish
 go build code.go
 ./code
+
+# 2-kun kodini ishga tushirish
+cd day-02
+go run code.go
 ```
 
 ## 📚 O'rganish rejasi (Learning Plan)
 
 - **Kun 1-5**: Asosiy tushunchalar (o'zgaruvchilar, funksiyalar, ma'lumot turlari)
+  - ✅ **Kun 1**: Package, import, o'zgaruvchilar, ma'lumot turlari, print funksiyalari
+  - ✅ **Kun 2**: Funksiyalar, parametrlar, qaytarish qiymatlari, variadic funksiyalar
 - **Kun 6-10**: Murakkab ma'lumot tuzilmalari (array, slice, map, struct)
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 16-20**: Concurrency (goroutine, channel)

@@ -73,12 +73,35 @@ city := "Toshkent"
 - `fmt.Println()` - chiqarish va yangi qator
 - `fmt.Printf()` - formatlangan chiqarish
 
+### 7. String operatsiyalari (Matn bilan ishlash)
+
+Go'da string bilan ishlash uchun asosiy operatsiyalar:
+
+```go
+// String birlashtirish
+text1 := "Salom"
+text2 := "Dunyo"
+combined := text1 + " " + text2
+
+// fmt.Sprintf() - formatlangan matn yaratish
+name := "Matnazar"
+age := 25
+formatted := fmt.Sprintf("Ism: %s, Yosh: %d", name, age)
+```
+
+**Asosiy string operatsiyalar:**
+- `+` - matnlarni birlashtirish
+- `fmt.Sprintf()` - formatlangan matn yaratish
+- String uzunligi va boshqa operatsiyalar keyingi kunda o'rganiladi
+
 ## Bugun o'rganilganlar
 
 ✅ Go dasturining asosiy struktura
 ✅ Package va import tushunchalari
 ✅ O'zgaruvchilar va ma'lumot turlari
 ✅ Print funksiyalari
+✅ Konstanta va matematik amallar
+✅ String bilan asosiy ishlash (birlashtirish, formatlash)
 ✅ Sodda dastur yozish
 
 ## Keyingi kun
