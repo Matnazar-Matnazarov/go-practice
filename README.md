@@ -16,6 +16,11 @@ go-practice/
 │   ├── notes.md     → O'rganilgan nazariya va qoidalar
 │   ├── code.go      → Asosiy dastur (main funksiya)
 │   └── functions.go → Barcha funksiyalar (alohida fayl)
+├── day-03/          → Kun 3: Shartli operatorlar, Array va Slice
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   ├── conditions.go → Shartli operatorlar (if, switch)
+│   └── arrays_slices.go → Array va Slice operatsiyalari
 ├── ...
 ├── day-30/          → Kun 30: Yakuniy loyiha
 │   ├── notes.md
@@ -46,6 +51,13 @@ go run day-02/*.go
 cd day-02
 go build
 ./day-02
+
+# Kun 3 kodini ishga tushirish
+cd day-03
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-03/*.go
 ```
 
 ## 📚 O'rganish rejasi (Learning Plan)
@@ -53,6 +65,7 @@ go build
 - **Kun 1-5**: Asosiy tushunchalar (o'zgaruvchilar, funksiyalar, ma'lumot turlari)
   - ✅ **Kun 1**: Package, import, o'zgaruvchilar, ma'lumot turlari, print funksiyalari
   - ✅ **Kun 2**: Funksiyalar, parametrlar, qaytarish qiymatlari, variadic funksiyalar
+  - ✅ **Kun 3**: Shartli operatorlar (if, switch), Array va Slice
 - **Kun 6-10**: Murakkab ma'lumot tuzilmalari (array, slice, map, struct)
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 16-20**: Concurrency (goroutine, channel)
