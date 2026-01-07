@@ -21,6 +21,11 @@ go-practice/
 │   ├── code.go      → Asosiy dastur (main funksiya)
 │   ├── conditions.go → Shartli operatorlar (if, switch)
 │   └── arrays_slices.go → Array va Slice operatsiyalari
+├── day-04/          → Kun 4: Map (Xarita) va For Loop
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   ├── maps.go      → Map operatsiyalari
+│   └── loops.go     → For loop turlari
 ├── ...
 ├── day-30/          → Kun 30: Yakuniy loyiha
 │   ├── notes.md
@@ -58,6 +63,13 @@ go run *.go
 
 # Yoki to'g'ridan-to'g'ri
 go run day-03/*.go
+
+# Kun 4 kodini ishga tushirish
+cd day-04
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-04/*.go
 ```
 
 ## 📚 O'rganish rejasi (Learning Plan)
@@ -66,7 +78,8 @@ go run day-03/*.go
   - ✅ **Kun 1**: Package, import, o'zgaruvchilar, ma'lumot turlari, print funksiyalari
   - ✅ **Kun 2**: Funksiyalar, parametrlar, qaytarish qiymatlari, variadic funksiyalar
   - ✅ **Kun 3**: Shartli operatorlar (if, switch), Array va Slice
-- **Kun 6-10**: Murakkab ma'lumot tuzilmalari (array, slice, map, struct)
+  - ✅ **Kun 4**: Map (xarita), For Loop (tsikllar)
+- **Kun 6-10**: Murakkab ma'lumot tuzilmalari (struct, metodlar, interface)
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 16-20**: Concurrency (goroutine, channel)
 - **Kun 21-25**: File I/O, error handling, testing
