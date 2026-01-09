@@ -32,6 +32,12 @@ go-practice/
 │   ├── structs.go   → Struct operatsiyalari va metodlar
 │   ├── functions_advanced.go → Kengaytirilgan funksiyalar
 │   └── loops_advanced.go → Kengaytirilgan for loop
+├── day-06/          → Kun 6: Queue (Navbat) va Goroutine (Parallel dasturlash)
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   ├── queue.go     → Queue ma'lumot tuzilmasi
+│   ├── goroutines.go → Goroutine va Channel operatsiyalari
+│   └── run.sh       → Ishga tushirish skripti
 ├── ...
 ├── day-30/          → Kun 30: Yakuniy loyiha
 │   ├── notes.md
@@ -83,6 +89,17 @@ go run *.go
 
 # Yoki to'g'ridan-to'g'ri
 go run day-05/*.go
+
+# Kun 6 kodini ishga tushirish
+cd day-06
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-06/*.go
+
+# Yoki run.sh orqali
+cd day-06
+./run.sh
 ```
 
 ## 📚 O'rganish rejasi (Learning Plan)
@@ -93,7 +110,9 @@ go run day-05/*.go
   - ✅ **Kun 3**: Shartli operatorlar (if, switch), Array va Slice
   - ✅ **Kun 4**: Map (xarita), For Loop (tsikllar)
   - ✅ **Kun 5**: Struct (struktura), Funksiyalar (kengaytirilgan), For Loop (kengaytirilgan)
-- **Kun 6-10**: Murakkab ma'lumot tuzilmalari (pointer, interface, error handling)
+- **Kun 6-10**: Murakkab ma'lumot tuzilmalari va parallel dasturlash
+  - ✅ **Kun 6**: Queue (navbat), Goroutine va Channel (parallel dasturlash boshlang'ich)
+- **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 16-20**: Concurrency (goroutine, channel)
 - **Kun 21-25**: File I/O, error handling, testing
