@@ -38,6 +38,12 @@ go-practice/
 │   ├── queue.go     → Queue ma'lumot tuzilmasi
 │   ├── goroutines.go → Goroutine va Channel operatsiyalari
 │   └── run.sh       → Ishga tushirish skripti
+├── day-07/          → Kun 7: WaitGroup va Channel (Kengaytirilgan)
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   ├── waitgroup.go → WaitGroup operatsiyalari
+│   ├── channels.go  → Channel (kengaytirilgan) operatsiyalari
+│   └── run.sh       → Ishga tushirish skripti
 ├── ...
 ├── day-30/          → Kun 30: Yakuniy loyiha
 │   ├── notes.md
@@ -100,6 +106,17 @@ go run day-06/*.go
 # Yoki run.sh orqali
 cd day-06
 ./run.sh
+
+# Kun 7 kodini ishga tushirish
+cd day-07
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-07/*.go
+
+# Yoki run.sh orqali
+cd day-07
+./run.sh
 ```
 
 ## 📚 O'rganish rejasi (Learning Plan)
@@ -112,6 +129,7 @@ cd day-06
   - ✅ **Kun 5**: Struct (struktura), Funksiyalar (kengaytirilgan), For Loop (kengaytirilgan)
 - **Kun 6-10**: Murakkab ma'lumot tuzilmalari va parallel dasturlash
   - ✅ **Kun 6**: Queue (navbat), Goroutine va Channel (parallel dasturlash boshlang'ich)
+  - ✅ **Kun 7**: WaitGroup va Channel (kengaytirilgan)
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 16-20**: Concurrency (goroutine, channel)
