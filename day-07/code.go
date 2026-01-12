@@ -7,9 +7,8 @@ func main() {
 	fmt.Println("Kun 7: WaitGroup va Channel (Kengaytirilgan)")
 	fmt.Println()
 
-	
 	// 1. WAITGROUP
-	
+
 	fmt.Println("=== 1. WaitGroup ===")
 	fmt.Println()
 
@@ -68,9 +67,8 @@ func main() {
 	demonstrateWaitGroupPractical()
 	fmt.Println()
 
-	
 	// 2. CHANNEL (KENGAYTIRILGAN)
-	
+
 	fmt.Println("=== 2. Channel (Kengaytirilgan) ===")
 	fmt.Println()
 
@@ -164,9 +162,8 @@ func main() {
 	demonstrateChannelPractical()
 	fmt.Println()
 
-	
 	// 3. YAKUNIY XULOSA
-	
+
 	fmt.Println("=== Kun 7 yakunlandi! ===")
 	fmt.Println("O'rganildi:")
 	fmt.Println("  ✓ WaitGroup - goroutine larni kutish")
