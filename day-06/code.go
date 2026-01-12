@@ -9,9 +9,8 @@ func main() {
 	fmt.Println("Kun 6: Queue (Navbat) va Goroutine (Parallel dasturlash)")
 	fmt.Println()
 
-	
 	// 1. QUEUE (NAVBAT) MA'LUMOT TUZILMASI
-	
+
 	fmt.Println("=== 1. Queue (Navbat) ===")
 	fmt.Println()
 
@@ -63,9 +62,8 @@ func main() {
 	demonstrateQueueBFS()
 	fmt.Println()
 
-	
 	// 2. GOROUTINE (PARALLEL DASTURLASH)
-	
+
 	fmt.Println("=== 2. Goroutine (Parallel dasturlash) ===")
 	fmt.Println()
 
@@ -162,9 +160,8 @@ func main() {
 	demonstrateGoroutineConcurrentIO()
 	fmt.Println()
 
-	
 	// 3. YAKUNIY XULOSA
-	
+
 	fmt.Println("=== Kun 6 yakunlandi! ===")
 	fmt.Println("O'rganildi:")
 	fmt.Println("  ✓ Queue (navbat) - FIFO ma'lumot tuzilmasi")
