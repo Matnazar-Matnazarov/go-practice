@@ -44,6 +44,12 @@ go-practice/
 │   ├── waitgroup.go → WaitGroup operatsiyalari
 │   ├── channels.go  → Channel (kengaytirilgan) operatsiyalari
 │   └── run.sh       → Ishga tushirish skripti
+├── day-08/          → Kun 8: Context va Mutex (Sinxronizatsiya)
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   ├── context.go   → Context operatsiyalari
+│   ├── mutex.go     → Mutex va RWMutex operatsiyalari
+│   └── run.sh       → Ishga tushirish skripti
 ├── ...
 ├── day-30/          → Kun 30: Yakuniy loyiha
 │   ├── notes.md
@@ -117,6 +123,17 @@ go run day-07/*.go
 # Yoki run.sh orqali
 cd day-07
 ./run.sh
+
+# Kun 8 kodini ishga tushirish
+cd day-08
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-08/*.go
+
+# Yoki run.sh orqali
+cd day-08
+./run.sh
 ```
 
 ## 📚 O'rganish rejasi (Learning Plan)
@@ -130,6 +147,7 @@ cd day-07
 - **Kun 6-10**: Murakkab ma'lumot tuzilmalari va parallel dasturlash
   - ✅ **Kun 6**: Queue (navbat), Goroutine va Channel (parallel dasturlash boshlang'ich)
   - ✅ **Kun 7**: WaitGroup va Channel (kengaytirilgan)
+  - ✅ **Kun 8**: Context va Mutex (sinxronizatsiya)
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 16-20**: Concurrency (goroutine, channel)
