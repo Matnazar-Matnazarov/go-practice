@@ -50,6 +50,12 @@ go-practice/
 │   ├── context.go   → Context operatsiyalari
 │   ├── mutex.go     → Mutex va RWMutex operatsiyalari
 │   └── run.sh       → Ishga tushirish skripti
+├── day-09/          → Kun 9: Atomic Operations va Error Handling
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   ├── atomic.go    → Atomic operatsiyalar
+│   ├── errors.go    → Error handling
+│   └── run.sh       → Ishga tushirish skripti
 ├── ...
 ├── day-30/          → Kun 30: Yakuniy loyiha
 │   ├── notes.md
@@ -134,6 +140,17 @@ go run day-08/*.go
 # Yoki run.sh orqali
 cd day-08
 ./run.sh
+
+# Kun 9 kodini ishga tushirish
+cd day-09
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-09/*.go
+
+# Yoki run.sh orqali
+cd day-09
+./run.sh
 ```
 
 ## 📚 O'rganish rejasi (Learning Plan)
@@ -148,6 +165,7 @@ cd day-08
   - ✅ **Kun 6**: Queue (navbat), Goroutine va Channel (parallel dasturlash boshlang'ich)
   - ✅ **Kun 7**: WaitGroup va Channel (kengaytirilgan)
   - ✅ **Kun 8**: Context va Mutex (sinxronizatsiya)
+  - ✅ **Kun 9**: Atomic Operations va Error Handling
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
 - **Kun 16-20**: Concurrency (goroutine, channel)
