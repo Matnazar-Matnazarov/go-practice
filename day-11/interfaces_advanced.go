@@ -180,21 +180,30 @@ func demonstrateInterfaceNilCheck() {
 	r = f
 	fmt.Printf("  r == nil (nil pointer): %t\n", r == nil) // False!
 
-	// Nil tekshirish - type assertion
-	if r != nil {
-		if file, ok := r.(*File); ok && file != nil {
-			fmt.Printf("  File is not nil\n")
+	// Nil tekshirish - type assertion orqali
+	// Eslatma: r != nil tekshirish kerak emas, chunki r har doim non-nil
+	// (u nil pointer ni o'z ichiga oladi, lekin interface o'zi nil emas)
+	if file, ok := r.(*File); ok {
+		if file == nil {
+			fmt.Printf("  File is nil (nil pointer in interface)\n")
 		} else {
-			fmt.Printf("  File is nil\n")
+			fmt.Printf("  File is not nil\n")
 		}
 	}
 
-	// To'g'ri nil tekshirish
+	// Nil pointer interface ga uzatilganda
+	// Eslatma: var r2 Reader = (*File)(nil) - bu holatda r2 == nil har doim false
+	// chunki interface nil emas (u nil pointer ni o'z ichiga oladi, lekin interface o'zi nil emas)
 	var r2 Reader = (*File)(nil)
-	if r2 == nil {
-		fmt.Printf("  r2 is nil\n")
-	} else {
-		fmt.Printf("  r2 is not nil (nil pointer in interface)\n")
+	fmt.Printf("  r2 == nil: %t (har doim false, chunki interface nil emas)\n", r2 == nil)
+
+	// To'g'ri nil tekshirish - type assertion orqali
+	if file, ok := r2.(*File); ok {
+		if file == nil {
+			fmt.Printf("  r2 contains nil pointer (to'g'ri tekshirish)\n")
+		} else {
+			fmt.Printf("  r2 contains non-nil pointer\n")
+		}
 	}
 }
 
