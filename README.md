@@ -62,6 +62,23 @@ go-practice/
 │   ├── pointers.go  → Pointer operatsiyalari
 │   ├── interfaces.go → Interface operatsiyalari
 │   └── run.sh       → Ishga tushirish skripti
+├── day-11/          → Kun 11: Funksiyalar va Metodlar (Pointer, Interface)
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   ├── functions_advanced.go → Kengaytirilgan funksiyalar
+│   ├── interfaces_advanced.go → Kengaytirilgan interface operatsiyalari
+│   ├── methods.go   → Metodlar va method sets
+│   └── run.sh       → Ishga tushirish skripti
+├── day-12/          → Kun 12: Generics (Umumiy turlar)
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   ├── generics.go  → Generics misollari va funksiyalar
+│   └── run.sh       → Ishga tushirish skripti
+├── day-13/          → Kun 13: Reflection (Refleksiya)
+│   ├── notes.md     → O'rganilgan nazariya va qoidalar
+│   ├── code.go      → Asosiy dastur (main funksiya)
+│   ├── reflection.go → Reflection misollari va funksiyalar
+│   └── run.sh       → Ishga tushirish skripti
 ├── ...
 ├── day-30/          → Kun 30: Yakuniy loyiha
 │   ├── notes.md
@@ -168,6 +185,39 @@ go run day-10/*.go
 # Yoki run.sh orqali
 cd day-10
 ./run.sh
+
+# Kun 11 kodini ishga tushirish
+cd day-11
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-11/*.go
+
+# Yoki run.sh orqali
+cd day-11
+./run.sh
+
+# Kun 12 kodini ishga tushirish
+cd day-12
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-12/*.go
+
+# Yoki run.sh orqali
+cd day-12
+./run.sh
+
+# Kun 13 kodini ishga tushirish
+cd day-13
+go run *.go
+
+# Yoki to'g'ridan-to'g'ri
+go run day-13/*.go
+
+# Yoki run.sh orqali
+cd day-13
+./run.sh
 ```
 
 ## 📚 O'rganish rejasi (Learning Plan)
@@ -184,11 +234,15 @@ cd day-10
   - ✅ **Kun 8**: Context va Mutex (sinxronizatsiya)
   - ✅ **Kun 9**: Atomic Operations va Error Handling
   - ✅ **Kun 10**: Pointers va Interfaces
-- **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
-- **Kun 11-15**: Funksiyalar va metodlar (pointer, interface)
-- **Kun 16-20**: Concurrency (goroutine, channel)
-- **Kun 21-25**: File I/O, error handling, testing
-- **Kun 26-30**: Loyihalar va amaliyot
+- **Kun 11-15**: Funksiyalar va metodlar (pointer, interface, generics, reflection)
+  - ✅ **Kun 11**: Funksiyalar va Metodlar (Pointer, Interface) - Method sets, method expressions, method values, method chaining, higher-order functions, design patterns
+  - ✅ **Kun 12**: Generics (Umumiy turlar) - Type parameters, type constraints, generic functions, generic data structures, interface constraints
+  - ✅ **Kun 13**: Reflection (Refleksiya) - Type inspection, value manipulation, struct fields, method invocation, slice/map reflection
+  - 🔄 **Kun 14**: TBD
+  - 🔄 **Kun 15**: TBD
+- **Kun 16-20**: Concurrency (goroutine, channel) - Advanced concurrency patterns
+- **Kun 21-25**: File I/O, error handling, testing - File operations, JSON/XML, testing frameworks
+- **Kun 26-30**: Loyihalar va amaliyot - Real-world projects and applications
 
 ## 🌿 Branch strategiyasi (Branch Strategy)
 
@@ -206,7 +260,40 @@ cd day-10
 
 30 kun ichida Go dasturlash tilini o'rganib, professional darajada kod yozishni o'zlashtirish.
 
+## 📊 Progress (Jarayon)
+
+**Umumiy progress**: 13/30 kun (43.3% ✅)
+
+- ✅ **Kun 1-5**: Asosiy tushunchalar (100% - 5/5 kun)
+- ✅ **Kun 6-10**: Murakkab ma'lumot tuzilmalari va parallel dasturlash (100% - 5/5 kun)
+- 🔄 **Kun 11-15**: Funksiyalar va metodlar (60% - 3/5 kun)
+  - ✅ Kun 11: Funksiyalar va Metodlar (Pointer, Interface)
+  - ✅ Kun 12: Generics (Umumiy turlar)
+  - ✅ Kun 13: Reflection (Refleksiya)
+  - 🔄 Kun 14: TBD
+  - 🔄 Kun 15: TBD
+- ⏳ **Kun 16-20**: Concurrency (0% - 0/5 kun)
+- ⏳ **Kun 21-25**: File I/O, error handling, testing (0% - 0/5 kun)
+- ⏳ **Kun 26-30**: Loyihalar va amaliyot (0% - 0/5 kun)
+
+## 🛠️ Texnologiyalar va Xususiyatlar (Technologies & Features)
+
+### O'rganilgan mavzular (Topics Covered)
+
+- ✅ **Asosiy tushunchalar**: Variables, functions, data types, control flow
+- ✅ **Ma'lumot tuzilmalari**: Arrays, slices, maps, structs
+- ✅ **Concurrency**: Goroutines, channels, WaitGroup, Context, Mutex, Atomic operations
+- ✅ **Advanced features**: Pointers, interfaces, generics, reflection
+- ✅ **Error handling**: Error types, error wrapping, error handling patterns
+- ✅ **Design patterns**: Builder, Strategy, Observer patterns
+
+### Go Versiyasi (Go Version)
+
+- **Minimal versiya**: Go 1.18+ (Generics qo'llab-quvvatlash uchun)
+- **Tavsiya etilgan**: Go 1.21+ (eng so'nggi xususiyatlar uchun)
+
 ---
 
-**Boshlanish sanasi**: 2026
-**Status**: 🟢 Faol o'rganish jarayonida
+**Boshlanish sanasi**: 2026  
+**Status**: 🟢 Faol o'rganish jarayonida  
+**Oxirgi yangilanish**: Day 13 - Reflection (Refleksiya)
