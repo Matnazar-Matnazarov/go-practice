@@ -1,10 +1,40 @@
-# Go 30-Day Journey
+<div align="center">
 
-Go dasturlash tilini 0 dan o'rganish: 30 kunlik mashqlar va loyihalar.
+# 🚀 Go 30-Day Journey
 
-Learning Go from scratch in 30 days. Daily notes, exercises, and mini-projects.
+![Go Version](https://img.shields.io/badge/Go-1.18%2B-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Progress](https://img.shields.io/badge/Progress-43.3%25-00ADD8?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+
+**Go dasturlash tilini 0 dan o'rganish: 30 kunlik mashqlar va loyihalar**
+
+*Learning Go from scratch in 30 days. Daily notes, exercises, and mini-projects.*
+
+[![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)](https://golang.org/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=flat&logo=github)](https://github.com)
+
+</div>
+
+---
+
+## 📋 Table of Contents (Mundarija)
+
+- [📁 Struktura](#-struktura-structure)
+- [🚀 Dasturni ishga tushirish](#-dasturni-ishga-tushirish-how-to-run)
+- [📚 O'rganish rejasi](#-organish-rejasi-learning-plan)
+- [📊 Progress](#-progress-jarayon)
+- [🛠️ Texnologiyalar](#️-texnologiyalar-va-xususiyatlar-technologies--features)
+- [🌿 Branch strategiyasi](#-branch-strategiyasi-branch-strategy)
+- [📝 Eslatmalar](#-eslatmalar-notes)
+- [🎯 Maqsad](#-maqsad-goal)
 
 ## 📁 Struktura (Structure)
+
+<details>
+<summary><b>📂 Loyiha strukturasini ko'rish (Click to expand)</b></summary>
+
+```
 
 ```
 go-practice/
@@ -86,6 +116,8 @@ go-practice/
 └── exercises/       → Kichik loyihalar
     └── small-projects/
 ```
+
+</details>
 
 ## 🚀 Dasturni ishga tushirish (How to run)
 
@@ -222,6 +254,10 @@ cd day-13
 
 ## 📚 O'rganish rejasi (Learning Plan)
 
+### 📅 30-Kunlik Reja
+
+Bu loyiha 30 kunlik strukturalashtirilgan o'rganish rejasini taklif qiladi. Har bir kun yangi mavzular va amaliy mashqlarni o'z ichiga oladi.
+
 - **Kun 1-5**: Asosiy tushunchalar (o'zgaruvchilar, funksiyalar, ma'lumot turlari)
   - ✅ **Kun 1**: Package, import, o'zgaruvchilar, ma'lumot turlari, print funksiyalari
   - ✅ **Kun 2**: Funksiyalar, parametrlar, qaytarish qiymatlari, variadic funksiyalar
@@ -246,54 +282,224 @@ cd day-13
 
 ## 🌿 Branch strategiyasi (Branch Strategy)
 
-- `main` → Stable progress / final working code
-- `dev` → Daily exercises / experiments
-- `day-01`, `day-02`, ... `day-30` → Har bir kun uchun alohida branch
+| Branch | Maqsad | Status |
+|--------|--------|--------|
+| `main` | ✅ Stable progress / final working code | Production-ready |
+| `dev` | 🔄 Daily exercises / experiments | Development |
+| `day-XX` | 📝 Har bir kun uchun alohida branch | Feature branches |
+
+### 🔀 Branch ishlatish
+
+```bash
+# Yangi kun uchun branch yaratish
+git checkout -b day-14
+
+# O'zgarishlarni commit qilish
+git add .
+git commit -m "feat: Add Day 14 - [Mavzu]"
+
+# Remote ga push qilish
+git push -u origin day-14
+```
 
 ## 📝 Eslatmalar (Notes)
 
-- Har bir kunda `notes.md` faylida nazariya va qoidalar
-- `code.go` faylida amaliy misollar va izohlar
-- Barcha kodlar o'zbek tilida izohlar bilan yozilgan
+### 📚 Fayl tuzilishi
+
+Har bir kun papkasida quyidagi fayllar mavjud:
+
+- 📄 **`notes.md`** - Nazariya, qoidalar va tushuntirishlar
+- 💻 **`code.go`** - Asosiy dastur (main funksiya)
+- 🔧 **`*.go`** - Qo'shimcha Go fayllar (mavzuga qarab)
+- 🚀 **`run.sh`** - Ishga tushirish skripti (ba'zi kunlar uchun)
+
+### 🌍 Til
+
+- Barcha kodlar **o'zbek tilida** izohlar bilan yozilgan
+- Hujjatlar **o'zbek va ingliz** tillarida
+- Kod misollari **o'zbek tilida** izohlar bilan
+
+### 💡 Maslahatlar
+
+- ✅ Har bir kunda `notes.md` faylini to'liq o'qing
+- ✅ Kodlarni o'zgartirib, tushunishni mustahkamlang
+- ✅ Har bir mavzuni mustahkamlang keyingi kunlarga o'tishdan oldin
+- ✅ Xatolarni o'qib, tushunishga harakat qiling
+
+### 📚 Fayl tuzilishi
+
+Har bir kun papkasida quyidagi fayllar mavjud:
+
+- 📄 **`notes.md`** - Nazariya, qoidalar va tushuntirishlar
+- 💻 **`code.go`** - Asosiy dastur (main funksiya)
+- 🔧 **`*.go`** - Qo'shimcha Go fayllar (mavzuga qarab)
+- 🚀 **`run.sh`** - Ishga tushirish skripti (ba'zi kunlar uchun)
+
+### 🌍 Til
+
+- Barcha kodlar **o'zbek tilida** izohlar bilan yozilgan
+- Hujjatlar **o'zbek va ingliz** tillarida
+- Kod misollari **o'zbek tilida** izohlar bilan
+
+### 💡 Maslahatlar
+
+- ✅ Har bir kunda `notes.md` faylini to'liq o'qing
+- ✅ Kodlarni o'zgartirib, tushunishni mustahkamlang
+- ✅ Har bir mavzuni mustahkamlang keyingi kunlarga o'tishdan oldin
+- ✅ Xatolarni o'qib, tushunishga harakat qiling
 
 ## 🎯 Maqsad (Goal)
 
-30 kun ichida Go dasturlash tilini o'rganib, professional darajada kod yozishni o'zlashtirish.
+<div align="center">
+
+### 🎓 30 kun ichida Go dasturlash tilini professional darajada o'zlashtirish
+
+**Asosiy maqsadlar:**
+- ✅ Go dasturlash tilining asosiy va murakkab tushunchalarini o'rganish
+- ✅ Amaliy loyihalar va mashqlar orqali bilimlarni mustahkamlash
+- ✅ Professional darajada Go kod yozish ko'nikmalarini rivojlantirish
+- ✅ Real-world loyihalar yaratish qobiliyatiga ega bo'lish
+
+</div>
 
 ## 📊 Progress (Jarayon)
 
-**Umumiy progress**: 13/30 kun (43.3% ✅)
+<div align="center">
+
+**Umumiy progress**: **13/30 kun** (43.3% ✅)
+
+```
+████████████████░░░░░░░░░░░░░░░░░░░░ 43.3%
+```
+
+</div>
+
+### 📈 Progress Breakdown
+
+| Bo'lim | Progress | Status | Kunlar |
+|-------|----------|--------|--------|
+| **Kun 1-5** | ✅ 100% | Tugallandi | 5/5 |
+| **Kun 6-10** | ✅ 100% | Tugallandi | 5/5 |
+| **Kun 11-15** | 🔄 60% | Jarayonda | 3/5 |
+| **Kun 16-20** | ⏳ 0% | Kutilmoqda | 0/5 |
+| **Kun 21-25** | ⏳ 0% | Kutilmoqda | 0/5 |
+| **Kun 26-30** | ⏳ 0% | Kutilmoqda | 0/5 |
+
+### 📝 Batafsil Progress
 
 - ✅ **Kun 1-5**: Asosiy tushunchalar (100% - 5/5 kun)
+  - ✅ Kun 1: Package, import, o'zgaruvchilar, ma'lumot turlari
+  - ✅ Kun 2: Funksiyalar, parametrlar, variadic funksiyalar
+  - ✅ Kun 3: Shartli operatorlar, Array va Slice
+  - ✅ Kun 4: Map, For Loop
+  - ✅ Kun 5: Struct, Kengaytirilgan funksiyalar
+
 - ✅ **Kun 6-10**: Murakkab ma'lumot tuzilmalari va parallel dasturlash (100% - 5/5 kun)
+  - ✅ Kun 6: Queue, Goroutine va Channel
+  - ✅ Kun 7: WaitGroup va Channel (kengaytirilgan)
+  - ✅ Kun 8: Context va Mutex
+  - ✅ Kun 9: Atomic Operations va Error Handling
+  - ✅ Kun 10: Pointers va Interfaces
+
 - 🔄 **Kun 11-15**: Funksiyalar va metodlar (60% - 3/5 kun)
-  - ✅ Kun 11: Funksiyalar va Metodlar (Pointer, Interface)
-  - ✅ Kun 12: Generics (Umumiy turlar)
-  - ✅ Kun 13: Reflection (Refleksiya)
-  - 🔄 Kun 14: TBD
-  - 🔄 Kun 15: TBD
+  - ✅ **Kun 11**: Funksiyalar va Metodlar (Pointer, Interface)
+  - ✅ **Kun 12**: Generics (Umumiy turlar)
+  - ✅ **Kun 13**: Reflection (Refleksiya)
+  - 🔄 **Kun 14**: TBD
+  - 🔄 **Kun 15**: TBD
+
 - ⏳ **Kun 16-20**: Concurrency (0% - 0/5 kun)
 - ⏳ **Kun 21-25**: File I/O, error handling, testing (0% - 0/5 kun)
 - ⏳ **Kun 26-30**: Loyihalar va amaliyot (0% - 0/5 kun)
 
 ## 🛠️ Texnologiyalar va Xususiyatlar (Technologies & Features)
 
-### O'rganilgan mavzular (Topics Covered)
+### 💻 O'rganilgan mavzular (Topics Covered)
 
-- ✅ **Asosiy tushunchalar**: Variables, functions, data types, control flow
-- ✅ **Ma'lumot tuzilmalari**: Arrays, slices, maps, structs
-- ✅ **Concurrency**: Goroutines, channels, WaitGroup, Context, Mutex, Atomic operations
-- ✅ **Advanced features**: Pointers, interfaces, generics, reflection
-- ✅ **Error handling**: Error types, error wrapping, error handling patterns
-- ✅ **Design patterns**: Builder, Strategy, Observer patterns
+<table>
+<tr>
+<td width="50%">
 
-### Go Versiyasi (Go Version)
+#### ✅ Asosiy tushunchalar
+- 📦 Package va Import
+- 🔢 Variables va Data Types
+- 🔄 Functions va Methods
+- 🎯 Control Flow (if, switch, loops)
 
-- **Minimal versiya**: Go 1.18+ (Generics qo'llab-quvvatlash uchun)
-- **Tavsiya etilgan**: Go 1.21+ (eng so'nggi xususiyatlar uchun)
+#### ✅ Ma'lumot tuzilmalari
+- 📊 Arrays va Slices
+- 🗺️ Maps (Xarita)
+- 🏗️ Structs va Methods
+- 🔗 Pointers
+
+</td>
+<td width="50%">
+
+#### ⚡ Concurrency
+- 🚀 Goroutines
+- 📡 Channels
+- ⏳ WaitGroup
+- 🎛️ Context
+- 🔒 Mutex va RWMutex
+- ⚛️ Atomic Operations
+
+#### 🎓 Advanced Features
+- 🎨 Interfaces
+- 🔧 Generics (Go 1.18+)
+- 🔍 Reflection
+- 🎭 Design Patterns
+
+</td>
+</tr>
+</table>
+
+### 📦 Design Patterns
+
+- 🏗️ **Builder Pattern** - Murakkab obyektlarni qurish
+- 🎯 **Strategy Pattern** - Algoritmlarni almashtirish
+- 👁️ **Observer Pattern** - O'zgarishlarni kuzatish
+
+### 🔧 Go Versiyasi (Go Version)
+
+| Versiya | Status | Xususiyatlar |
+|---------|--------|--------------|
+| **Go 1.18+** | ✅ Minimal | Generics qo'llab-quvvatlash |
+| **Go 1.21+** | ⭐ Tavsiya | Eng so'nggi xususiyatlar |
+
+### 📚 Qo'shimcha Resurslar
+
+- 📖 [Go Documentation](https://golang.org/doc/)
+- 🎓 [Go Tour](https://go.dev/tour/)
+- 📝 [Effective Go](https://go.dev/doc/effective_go)
+- 🐹 [Go by Example](https://gobyexample.com/)
 
 ---
 
-**Boshlanish sanasi**: 2026  
-**Status**: 🟢 Faol o'rganish jarayonida  
-**Oxirgi yangilanish**: Day 13 - Reflection (Refleksiya)
+<div align="center">
+
+### 📅 Project Information
+
+| Parametr | Qiymat |
+|----------|--------|
+| **🌍 Til (Language)** | O'zbek / English |
+| **📅 Boshlanish sanasi** | 2026 |
+| **📊 Status** | 🟢 Faol o'rganish jarayonida |
+| **🔄 Oxirgi yangilanish** | Day 13 - Reflection (Refleksiya) |
+| **📝 License** | MIT |
+
+---
+
+### ⭐ Star ⭐
+
+Agar bu loyiha sizga foydali bo'lsa, yulduzcha qo'yib qo'llab-quvvatlang!
+
+*If you find this project helpful, please give it a star!*
+
+---
+
+**Made with ❤️ and Go**
+
+[![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://golang.org/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com)
+
+</div>
