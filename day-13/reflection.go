@@ -5,7 +5,9 @@ import (
 	"reflect"
 )
 
+
 // 1. REFLECTION ASOSLARI
+
 
 // demonstrateTypeOfAndValueOf - TypeOf va ValueOf
 func demonstrateTypeOfAndValueOf() {
