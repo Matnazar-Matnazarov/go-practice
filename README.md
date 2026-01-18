@@ -495,7 +495,6 @@ Agar bu loyiha sizga foydali bo'lsa, yulduzcha qo'yib qo'llab-quvvatlang!
 
 *If you find this project helpful, please give it a star!*
 
-
 ---
 
 **Made with ❤️ and Go**
