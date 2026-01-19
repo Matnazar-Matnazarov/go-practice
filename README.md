@@ -274,8 +274,8 @@ Bu loyiha 30 kunlik strukturalashtirilgan o'rganish rejasini taklif qiladi. Har 
   - ✅ **Kun 11**: Funksiyalar va Metodlar (Pointer, Interface) - Method sets, method expressions, method values, method chaining, higher-order functions, design patterns
   - ✅ **Kun 12**: Generics (Umumiy turlar) - Type parameters, type constraints, generic functions, generic data structures, interface constraints
   - ✅ **Kun 13**: Reflection (Refleksiya) - Type inspection, value manipulation, struct fields, method invocation, slice/map reflection
-  - 🔄 **Kun 14**: TBD
-  - 🔄 **Kun 15**: TBD
+  - ✅ **Kun 14**: Packages va Modules (Paketlar va Modullar)
+  - ✅ **Kun 15**: Packages & Modules (Advanced)
 - **Kun 16-20**: Concurrency (goroutine, channel) - Advanced concurrency patterns
 - **Kun 21-25**: File I/O, error handling, testing - File operations, JSON/XML, testing frameworks
 - **Kun 26-30**: Loyihalar va amaliyot - Real-world projects and applications
@@ -366,10 +366,10 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 
 <div align="center">
 
-**Umumiy progress**: **13/30 kun** (43.3% ✅)
+**Umumiy progress**: **15/30 kun** (50% ✅)
 
 ```
-████████████████░░░░░░░░░░░░░░░░░░░░ 43.3%
+████████████████████░░░░░░░░░░░░░░░░ 50%
 ```
 
 </div>
@@ -380,7 +380,7 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 |-------|----------|--------|--------|
 | **Kun 1-5** | ✅ 100% | Tugallandi | 5/5 |
 | **Kun 6-10** | ✅ 100% | Tugallandi | 5/5 |
-| **Kun 11-15** | 🔄 60% | Jarayonda | 3/5 |
+| **Kun 11-15** | ✅ 100% | Tugallandi | 5/5 |
 | **Kun 16-20** | ⏳ 0% | Kutilmoqda | 0/5 |
 | **Kun 21-25** | ⏳ 0% | Kutilmoqda | 0/5 |
 | **Kun 26-30** | ⏳ 0% | Kutilmoqda | 0/5 |
@@ -401,12 +401,12 @@ Har bir kun papkasida quyidagi fayllar mavjud:
   - ✅ Kun 9: Atomic Operations va Error Handling
   - ✅ Kun 10: Pointers va Interfaces
 
-- 🔄 **Kun 11-15**: Funksiyalar va metodlar (60% - 3/5 kun)
+- ✅ **Kun 11-15**: Funksiyalar va metodlar (100% - 5/5 kun)
   - ✅ **Kun 11**: Funksiyalar va Metodlar (Pointer, Interface)
   - ✅ **Kun 12**: Generics (Umumiy turlar)
   - ✅ **Kun 13**: Reflection (Refleksiya)
-  - 🔄 **Kun 14**: TBD
-  - 🔄 **Kun 15**: TBD
+  - ✅ **Kun 14**: Packages va Modules (Paketlar va Modullar)
+  - ✅ **Kun 15**: Packages & Modules (Advanced)
 
 - ⏳ **Kun 16-20**: Concurrency (0% - 0/5 kun)
 - ⏳ **Kun 21-25**: File I/O, error handling, testing (0% - 0/5 kun)
@@ -484,7 +484,7 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 | **🌍 Til (Language)** | O'zbek / English |
 | **📅 Boshlanish sanasi** | 2026 |
 | **📊 Status** | 🟢 Faol o'rganish jarayonida |
-| **🔄 Oxirgi yangilanish** | Day 13 - Reflection (Refleksiya) |
+| **🔄 Oxirgi yangilanish** | Day 15 - Packages & Modules (Advanced) |
 | **📝 License** | MIT |
 
 ---
