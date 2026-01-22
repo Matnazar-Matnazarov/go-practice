@@ -277,6 +277,7 @@ Bu loyiha 30 kunlik strukturalashtirilgan o'rganish rejasini taklif qiladi. Har 
   - ✅ **Kun 14**: Packages va Modules (Paketlar va Modullar)
   - ✅ **Kun 15**: Packages & Modules (Advanced)
 - **Kun 16-20**: Concurrency (goroutine, channel) - Advanced concurrency patterns
+  - ✅ **Kun 16**: Advanced Concurrency Patterns (bounded concurrency, cancellation, leak prevention, graceful shutdown)
 - **Kun 21-25**: File I/O, error handling, testing - File operations, JSON/XML, testing frameworks
 - **Kun 26-30**: Loyihalar va amaliyot - Real-world projects and applications
 
@@ -366,10 +367,10 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 
 <div align="center">
 
-**Umumiy progress**: **15/30 kun** (50% ✅)
+**Umumiy progress**: **16/30 kun** (53.3% ✅)
 
 ```
-████████████████████░░░░░░░░░░░░░░░░ 50%
+█████████████████████░░░░░░░░░░░░░░░ 53.3%
 ```
 
 </div>
@@ -381,7 +382,7 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 | **Kun 1-5** | ✅ 100% | Tugallandi | 5/5 |
 | **Kun 6-10** | ✅ 100% | Tugallandi | 5/5 |
 | **Kun 11-15** | ✅ 100% | Tugallandi | 5/5 |
-| **Kun 16-20** | ⏳ 0% | Kutilmoqda | 0/5 |
+| **Kun 16-20** | 🔄 20% | Jarayonda | 1/5 |
 | **Kun 21-25** | ⏳ 0% | Kutilmoqda | 0/5 |
 | **Kun 26-30** | ⏳ 0% | Kutilmoqda | 0/5 |
 
@@ -408,7 +409,8 @@ Har bir kun papkasida quyidagi fayllar mavjud:
   - ✅ **Kun 14**: Packages va Modules (Paketlar va Modullar)
   - ✅ **Kun 15**: Packages & Modules (Advanced)
 
-- ⏳ **Kun 16-20**: Concurrency (0% - 0/5 kun)
+- 🔄 **Kun 16-20**: Concurrency (20% - 1/5 kun)
+  - ✅ **Kun 16**: Advanced Concurrency Patterns
 - ⏳ **Kun 21-25**: File I/O, error handling, testing (0% - 0/5 kun)
 - ⏳ **Kun 26-30**: Loyihalar va amaliyot (0% - 0/5 kun)
 
@@ -484,7 +486,7 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 | **🌍 Til (Language)** | O'zbek / English |
 | **📅 Boshlanish sanasi** | 2026 |
 | **📊 Status** | 🟢 Faol o'rganish jarayonida |
-| **🔄 Oxirgi yangilanish** | Day 15 - Packages & Modules (Advanced) |
+| **🔄 Oxirgi yangilanish** | Day 16 - Advanced Concurrency Patterns |
 | **📝 License** | MIT |
 
 ---
