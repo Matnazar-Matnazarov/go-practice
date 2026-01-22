@@ -157,8 +157,6 @@ func demoGracefulShutdownConcept() {
 	ctx, cancel := context.WithTimeout(ctx, 10*time.Second)
 	defer cancel()
 
-	select {
-	case <-ctx.Done():
-		fmt.Printf("  shutdown triggered: %v\n", ctx.Err())
-	}
+	<-ctx.Done()
+	fmt.Printf("  shutdown triggered: %v\n", ctx.Err())
 }
