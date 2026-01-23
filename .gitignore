@@ -1,6 +1,9 @@
 # Kompilyatsiya qilingan fayllar
 day-*/day-*
 day-*/*.exe
+day-*/code
+day-*/test-build
+day-*/test-build.exe
 
 # Go build artifacts
 *.exe
