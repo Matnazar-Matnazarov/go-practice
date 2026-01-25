@@ -17,3 +17,13 @@ day-*/test-build.exe
 
 # Output
 *.out
+
+# Test files created by examples
+day-*/*_test.txt
+day-*/*_test.json
+day-*/*_output.txt
+day-*/*.json
+day-*/test_*.txt
+day-*/writer_*.txt
+day-*/scanner_*.txt
+day-*/readwrite_*.txt
