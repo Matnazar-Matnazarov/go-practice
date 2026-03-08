@@ -15,9 +15,9 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-// demonstrateFileDatabase — fayl-based SQLite (haqiqiy .db fayl yaratadi)
+// demonstrateFileDatabase — fayl-based SQLite (haqiqiy .sqlite3 fayl yaratadi)
 func demonstrateFileDatabase() {
-	dbPath := "demo.db"
+	dbPath := "demo.sqlite3"
 	// Eski faylni o'chirish (agar bor bo'lsa)
 	os.Remove(dbPath)
 
@@ -29,16 +29,35 @@ func demonstrateFileDatabase() {
 	}
 	defer db.Close()
 
+	// SQLite journal mode to DELETE (WAL o'rniga) - boshqa process lar bilan ishlash osonroq
+	if _, err := db.Exec("PRAGMA journal_mode=DELETE"); err != nil {
+		log.Printf("PRAGMA error: %v", err)
+	}
+
 	// Table yaratish
-	db.Exec(`CREATE TABLE IF NOT EXISTS users (
+	if _, err := db.Exec(`CREATE TABLE IF NOT EXISTS users (
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		name TEXT NOT NULL,
 		created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-	)`)
+	)`); err != nil {
+		log.Printf("Create table error: %v", err)
+		return
+	}
 
-	// Insert
-	db.Exec("INSERT INTO users (name) VALUES (?)", "Ali")
-	db.Exec("INSERT INTO users (name) VALUES (?)", "Vali")
+	// Insert with error checking
+	if _, err := db.Exec("INSERT INTO users (name) VALUES (?)", "Ali"); err != nil {
+		log.Printf("Insert Ali error: %v", err)
+		return
+	}
+	if _, err := db.Exec("INSERT INTO users (name) VALUES (?)", "Vali"); err != nil {
+		log.Printf("Insert Vali error: %v", err)
+		return
+	}
+
+	// Close before checking file size to ensure flush
+	if err := db.Close(); err != nil {
+		log.Printf("Close error: %v", err)
+	}
 
 	fmt.Println("  ✓ Fayl-based SQLite: demo.db yaratildi")
 	fmt.Println("  ✓ 2 ta user insert qilindi")
