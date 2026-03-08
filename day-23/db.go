@@ -1,14 +1,57 @@
 package main
 
+// NOTE: go-sqlite3 driver C kodidagi "const qualifier" warning
+// faqt ogohlantirish, xato emas. Dastur to‘liq ishlaydi.
+// Bu SQLite3 driver’ning ichki C implementatsiyasida bo‘lgan kichik issue.
+
 import (
 	"context"
 	"database/sql"
 	"fmt"
 	"log"
+	"os"
 	"time"
 
 	_ "github.com/mattn/go-sqlite3"
 )
+
+// demonstrateFileDatabase — fayl-based SQLite (haqiqiy .db fayl yaratadi)
+func demonstrateFileDatabase() {
+	dbPath := "demo.db"
+	// Eski faylni o'chirish (agar bor bo'lsa)
+	os.Remove(dbPath)
+
+	// Fayl-based SQLite
+	db, err := sql.Open("sqlite3", dbPath)
+	if err != nil {
+		log.Printf("Open error: %v", err)
+		return
+	}
+	defer db.Close()
+
+	// Table yaratish
+	db.Exec(`CREATE TABLE IF NOT EXISTS users (
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		name TEXT NOT NULL,
+		created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+	)`)
+
+	// Insert
+	db.Exec("INSERT INTO users (name) VALUES (?)", "Ali")
+	db.Exec("INSERT INTO users (name) VALUES (?)", "Vali")
+
+	fmt.Println("  ✓ Fayl-based SQLite: demo.db yaratildi")
+	fmt.Println("  ✓ 2 ta user insert qilindi")
+	fmt.Printf("  ✓ Fayl hajmi: %d bytes\n", getFileSize(dbPath))
+}
+
+func getFileSize(path string) int64 {
+	info, err := os.Stat(path)
+	if err != nil {
+		return 0
+	}
+	return info.Size()
+}
 
 // demonstrateConnection — databazaga ulanish va connection pool
 type User struct {

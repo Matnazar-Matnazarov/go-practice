@@ -8,6 +8,11 @@ func main() {
 	fmt.Println("Kun 23: Database va SQL (database/sql)")
 	fmt.Println()
 
+	// 0. Fayl-based SQLite (haqiqiy .db fayl)
+	fmt.Println("=== 0. Fayl-based SQLite (demo.db) ===")
+	demonstrateFileDatabase()
+	fmt.Println()
+
 	// 1. Databazaga ulanish
 	fmt.Println("=== 1. Databazaga ulanish ===")
 	demonstrateConnection()
@@ -40,6 +45,7 @@ func main() {
 
 	fmt.Println("=== Kun 23 yakunlandi! ===")
 	fmt.Println("O'rganildi:")
+	fmt.Println("  ✓ Fayl-based SQLite (demo.db)")
 	fmt.Println("  ✓ sql.Open va connection pool")
 	fmt.Println("  ✓ CREATE, INSERT, SELECT")
 	fmt.Println("  ✓ Prepared statements (Prepare)")
