@@ -1,0 +1,3 @@
+#!/bin/bash
+# ENV=dev|prod  PORT=8080  LOG_LEVEL=debug|info  DEBUG=true  DATABASE_URL=...
+go run *.go "$@"
