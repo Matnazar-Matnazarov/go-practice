@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kun 28: WebSocket Chat Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #00ADD8 0%, #0077a8 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ff4757;
+            animation: pulse 1s infinite;
+        }
+        .status-dot.connected {
+            background: #2ed573;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .message {
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            max-width: 80%;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .message.sent {
+            background: #00ADD8;
+            color: white;
+            margin-left: auto;
+        }
+        .message.received {
+            background: #e9ecef;
+            color: #333;
+        }
+        .message.system {
+            background: #fff3cd;
+            color: #856404;
+            margin: 10px auto;
+            text-align: center;
+            max-width: 100%;
+        }
+        .input-area {
+            display: flex;
+            padding: 20px;
+            gap: 10px;
+            background: #fff;
+            border-top: 1px solid #e9ecef;
+        }
+        .input-area input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .input-area input:focus {
+            border-color: #00ADD8;
+        }
+        .input-area button {
+            padding: 14px 28px;
+            background: #00ADD8;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .input-area button:hover {
+            background: #0077a8;
+        }
+        .input-area button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .info {
+            padding: 15px 20px;
+            background: #e7f3ff;
+            font-size: 13px;
+            color: #0056b3;
+        }
+        .info code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 WebSocket Chat (Kun 28)</h1>
+            <div class="status">
+                <div class="status-dot" id="statusDot"></div>
+                <span id="statusText">Disconnected</span>
+            </div>
+        </div>
+
+        <div class="messages" id="messages">
+            <div class="message system">
+                📡 WebSocket serverga ulanish kutilmoqda...
+            </div>
+        </div>
+
+        <div class="info">
+            💡 <strong>Demo:</strong> Bir nechta tab ochib, har birida chat yozing.
+            Xabarlar barcha klientlarga real-time yetib boradi!
+            <br>
+            🔧 <strong>API:</strong> <code>POST /broadcast</code> — serverdan xabar yuborish
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Xabar yozing..." disabled>
+            <button id="sendBtn" disabled>Yuborish</button>
+        </div>
+    </div>
+
+    <script>
+        const statusDot = document.getElementById('statusDot');
+        const statusText = document.getElementById('statusText');
+        const messagesDiv = document.getElementById('messages');
+        const messageInput = document.getElementById('messageInput');
+        const sendBtn = document.getElementById('sendBtn');
+
+        let ws = null;
+
+        function connect() {
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            ws = new WebSocket(`${protocol}//${window.location.host}/ws`);
+
+            ws.onopen = () => {
+                statusDot.classList.add('connected');
+                statusText.textContent = 'Connected';
+                messageInput.disabled = false;
+                sendBtn.disabled = false;
+                addSystemMessage('✅ WebSocket ulandi!');
+            };
+
+            ws.onclose = () => {
+                statusDot.classList.remove('connected');
+                statusText.textContent = 'Disconnected';
+                messageInput.disabled = true;
+                sendBtn.disabled = true;
+                addSystemMessage('🔌 WebSocket uzildi. 5 soniyada qayta ulanish...');
+                setTimeout(connect, 5000);
+            };
+
+            ws.onerror = (error) => {
+                console.error('WebSocket error:', error);
+                addSystemMessage('⚠️ Xatolik yuz berdi');
+            };
+
+            ws.onmessage = (event) => {
+                const data = event.data;
+                if (data.startsWith('👋')) {
+                    addSystemMessage(data);
+                } else {
+                    addMessage(data, 'received');
+                }
+            };
+        }
+
+        function addMessage(text, type) {
+            const div = document.createElement('div');
+            div.className = `message ${type}`;
+            div.textContent = text;
+            messagesDiv.appendChild(div);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function addSystemMessage(text) {
+            addMessage(text, 'system');
+        }
+
+        function sendMessage() {
+            const text = messageInput.value.trim();
+            if (text && ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(text);
+                addMessage(text, 'sent');
+                messageInput.value = '';
+            }
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // Auto-connect on page load
+        connect();
+    </script>
+</body>
+</html>
