@@ -368,10 +368,10 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 
 <div align="center">
 
-**Umumiy progress**: **16/30 kun** (53.3% ✅)
+**Umumiy progress**: **28/30 kun** (93.3% ✅)
 
 ```
-█████████████████████░░░░░░░░░░░░░░░ 53.3%
+████████████████████████████████████░ 93.3%
 ```
 
 </div>
@@ -383,9 +383,9 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 | **Kun 1-5** | ✅ 100% | Tugallandi | 5/5 |
 | **Kun 6-10** | ✅ 100% | Tugallandi | 5/5 |
 | **Kun 11-15** | ✅ 100% | Tugallandi | 5/5 |
-| **Kun 16-20** | 🔄 20% | Jarayonda | 1/5 |
-| **Kun 21-25** | ⏳ 0% | Kutilmoqda | 0/5 |
-| **Kun 26-30** | ⏳ 0% | Kutilmoqda | 0/5 |
+| **Kun 16-20** | ✅ 100% | Tugallandi | 5/5 |
+| **Kun 21-25** | ✅ 100% | Tugallandi | 5/5 |
+| **Kun 26-30** | 🔄 60% | Jarayonda | 3/5 |
 
 ### 📝 Batafsil Progress
 
@@ -410,10 +410,26 @@ Har bir kun papkasida quyidagi fayllar mavjud:
   - ✅ **Kun 14**: Packages va Modules (Paketlar va Modullar)
   - ✅ **Kun 15**: Packages & Modules (Advanced)
 
-- 🔄 **Kun 16-20**: Concurrency (20% - 1/5 kun)
+- ✅ **Kun 16-20**: Concurrency (100% - 5/5 kun)
   - ✅ **Kun 16**: Advanced Concurrency Patterns
-- ⏳ **Kun 21-25**: File I/O, error handling, testing (0% - 0/5 kun)
-- ⏳ **Kun 26-30**: Loyihalar va amaliyot (0% - 0/5 kun)
+  - ✅ **Kun 17**: Patterns (Worker Pool, Pub/Sub, Fan-Out/Fan-In)
+  - ✅ **Kun 18**: Testing (Unit tests, Table-driven, Benchmarks)
+  - ✅ **Kun 19**: JSON & I/O (Encoding, File operations)
+  - ✅ **Kun 20**: HTTP Server (REST API, Handler, Middleware)
+
+- ✅ **Kun 21-25**: HTTP Client, Middleware, Database (100% - 5/5 kun)
+  - ✅ **Kun 21**: HTTP Client & API Testing (httptest)
+  - ✅ **Kun 22**: HTTP Middleware & Error Handling
+  - ✅ **Kun 23**: Database (SQL, connection pool)
+  - ✅ **Kun 24**: Flags & CLI (Command-line arguments)
+  - ✅ **Kun 25**: Logger (Structured logging)
+
+- 🔄 **Kun 26-30**: Loyihalar va amaliyot (60% - 3/5 kun)
+  - ✅ **Kun 26**: Config Management (Environment variables)
+  - ✅ **Kun 27**: Graceful Shutdown & Signal Handling
+  - ✅ **Kun 28**: WebSocket & Real-Time Communication
+  - ⏳ **Kun 29**: TBD
+  - ⏳ **Kun 30**: Yakuniy loyiha
 
 ## 🛠️ Texnologiyalar va Xususiyatlar (Technologies & Features)
 
@@ -452,6 +468,12 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 - 🔍 Reflection
 - 🎭 Design Patterns
 
+#### 🌐 Web & Network
+- 🖥️ HTTP Server (net/http)
+- 🌍 HTTP Client
+- 🔌 WebSocket (Real-time)
+- 🧪 API Testing (httptest)
+
 </td>
 </tr>
 </table>
@@ -487,7 +509,7 @@ Har bir kun papkasida quyidagi fayllar mavjud:
 | **🌍 Til (Language)** | O'zbek / English |
 | **📅 Boshlanish sanasi** | 2026 |
 | **📊 Status** | 🟢 Faol o'rganish jarayonida |
-| **🔄 Oxirgi yangilanish** | Day 16 - Advanced Concurrency Patterns |
+| **🔄 Oxirgi yangilanish** | Day 28 - WebSocket & Real-Time Communication |
 | **📝 License** | MIT |
 
 ---
