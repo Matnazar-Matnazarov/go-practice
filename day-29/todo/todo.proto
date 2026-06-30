@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package todo;
+
+// Go uchun package nomi
+option go_package = "day-29/todo";
+
+// Todo xizmati (Service)
+service TodoService {
+  // Unary RPC: Bitta so'rov, bitta javob
+  rpc AddTodo (AddTodoRequest) returns (TodoResponse) {}
+  
+  // Server Streaming RPC: Bitta so'rov, ko'plab javoblar oqimi
+  rpc ListTodos (ListTodosRequest) returns (stream TodoResponse) {}
+}
+
+// Xabar turlari (Messages)
+message Todo {
+  string id = 1;
+  string title = 2;
+  bool completed = 3;
+}
+
+message AddTodoRequest {
+  string title = 1;
+}
+
+message TodoResponse {
+  Todo todo = 1;
+}
+
+message ListTodosRequest {
+  // Barcha vazifalarni olish uchun bo'sh so'rov
+}
